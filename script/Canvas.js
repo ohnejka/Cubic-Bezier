@@ -4,6 +4,7 @@ export default class Canvas {
     constructor({element}) {
         this._el = element;
         this._content  = element.getContext('2d');
+
         this._clickHandler();
         this._initButton();
         
@@ -32,7 +33,7 @@ _clickHandler() {
             
 
             if (this._count < 4) {
-                console.log(e);
+                
 
                 let point = {
                     x: e.clientX - rect.left,
@@ -68,7 +69,7 @@ _clickHandler() {
 
 _drawMainPoint(item) {
 
-    this._content.fillStyle = 'rgb(138, 169, 137)';
+    this._content.fillStyle = 'rgb(71, 96, 64)';
 
     this._content.save();
     this._content.beginPath();
@@ -90,7 +91,7 @@ _drawControlPoint(item) {
 
 _drawLine(arr) {
 
-    this._content.strokeStyle = 'rgb(138, 169, 137)';
+    this._content.strokeStyle = 'rgb(71, 96, 64)';
     this._content.lineWidth = 1;
     this._content.lineCap = 'round';
 
@@ -103,15 +104,22 @@ _drawLine(arr) {
 
 _drawBezierCurve(arr) {
 
-    this._content.strokeStyle = 'rgb(138, 169, 137)';
+    let startPoint = arr[0];
+    let endPoint = arr[1];
+
+    let controlPointOne = arr[2];
+    let controlPointTwo = arr[3];
+
+    this._content.strokeStyle = 'rgb(71, 96, 64)';
     this._content.lineWidth = 7;
 
     this._content.beginPath();
-    this._content.moveTo(arr[0].x, arr[0].y);
-    this._content.bezierCurveTo(arr[2].x, arr[2].y,
-                    arr[3].x, arr[3].y,
-                    arr[1].x, arr[1].y);
+    this._content.moveTo(startPoint.x, startPoint.y);
+    this._content.bezierCurveTo(controlPointOne.x, controlPointOne.y,
+                    controlPointTwo.x, controlPointTwo.y,
+                    endPoint.x, endPoint.y);
     this._content.stroke();
+
 }
 
 
