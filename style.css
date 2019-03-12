@@ -1,62 +1,72 @@
 body {
-    background-image: url('./img/wallpaper.png');
+    background-image: url("./img/wallpaper.png");
     background-position: 0 0;
     background-repeat: repeat;
-}
-
-h1,
-.hint {
-    font-family: 'Amatic SC', cursive;
+  }
+  
+  h1,
+  .hint {
+    font-family: "Amatic SC", cursive;
     font-size: 50px;
     margin-bottom: 10px;
     margin-top: 0px;
-}
-
-.hint {
+  }
+  
+  .hint {
     font-size: 20px;
-}
-
-.container {
+  }
+  
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
     margin: 0 auto;
     margin-top: 15px;
     width: 600px;
-
+  
     background-color: white;
-}
-
-.main-canvas {
+  }
+  
+  .main-canvas {
     display: block;
     border: 1px dotted bisque;
     margin-bottom: 20px;
-}
-
-.restart-button {
+  }
+  
+  .restart-button {
     width: 150px;
     height: 40px;
     border: none;
-
-    font-family: 'Amatic SC', cursive;
+  
+    font-family: "Amatic SC", cursive;
     font-size: 25px;
     margin-bottom: 10px;
-
-}
-
-.restart-button:hover,
-.restart-button:focus,
-.restart-button:active {
-    background-color: rgb(239,149,74);
+  }
+  
+  .restart-button:hover,
+  .restart-button:focus,
+  .restart-button:active {
+    background-color: rgb(239, 149, 74);
     -webkit-box-shadow: 0px 0px 9px 2px rgba(124, 182, 158, 0.6);
     box-shadow: 0px 0px 5px 2px rgba(218, 109, 19, 0.3);
     outline: none;
-}
-
-.restart-button:active {
-    background-color:rgb(237, 135, 51);
+  }
+  
+  .restart-button:active {
+    background-color: rgb(237, 135, 51);
     -webkit-box-shadow: 0px 0px 9px 2px rgba(124, 182, 158, 0.8);
-    box-shadow: 0px 0px 5px 2px rgba(218,109,19, 0.6);
-}
+    box-shadow: 0px 0px 5px 2px rgba(218, 109, 19, 0.6);
+  }
+  
